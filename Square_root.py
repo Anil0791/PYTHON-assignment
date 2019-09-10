@@ -11,7 +11,7 @@
 
 =======================================================================================================import math
 d=input("enter the nos").split(",")
-n=len(d)
+n=len(d)                            # use for output format
 p=1
 c=50;h=30
 for j in d:
