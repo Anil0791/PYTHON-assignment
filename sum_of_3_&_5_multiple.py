@@ -2,3 +2,12 @@
 # For example, if limit is 20, it should return the sum of 3, 5, 6, 9, 10, 12, 15, 18, 20
 
 ================================================================================================
+def sum(limit):
+  k=0
+  for i in range(0,limit+1):
+    if i%3==0 or i%5==0:
+      k=k+i
+  return k
+
+limit=int(input("enter the limit"))
+sum1(limit)
