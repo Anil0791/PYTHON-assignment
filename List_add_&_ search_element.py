@@ -1,6 +1,6 @@
-Insert a name into list
-if those are present in this then show name already exist
-if not then add name into list
+# Insert a name into list
+# if those are present in this then show name already exist
+# if not then add name into list
 
 ========================================================
 def np1(np):
