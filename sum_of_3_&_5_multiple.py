@@ -10,4 +10,4 @@ def sum(limit):
   return k
 
 limit=int(input("enter the limit"))
-sum1(limit)
+sum(limit)
