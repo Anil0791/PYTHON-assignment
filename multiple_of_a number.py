@@ -5,6 +5,7 @@
 # Hints:
 # Consider use range(#begin, #end) method.
 ===================================================================================================================
+************* with function************
 def show(x,y):
       for i in range(x,y+1):
             if i%7==0 and i%5!=0:
@@ -14,3 +15,12 @@ def show(x,y):
 # x,y=map(int,input("enter the limit").split(","))
 x=2000;y=3000
 show(x,y)
+
+
+=========================================================================================
+************** without function ************************
+l1=[]
+for i in range(2000,3001):
+      if i%7==0 and i%5!=0:
+            l1.append(i)
+print(",".join(l1))
