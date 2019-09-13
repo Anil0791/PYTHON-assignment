@@ -190,12 +190,129 @@ ANSWER
 
  =======================================================================================================================================
 
+Question 8
+Why are local variable names beginning with an underscore discouraged?
+a. they are used to indicate a private variables of a class
+b. they confuse the interpreter
+c. they are used to indicate global variable
+d. they slow down execution
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+=======
+  ANS: A
+  bcoz python has no private variable concepts, 
+  so if any variable name begin with underscore(_) it means those are not acesssed from outside the class
+
+========================================================================================================================================
+
+Question 9
+Suppose list1=[2,33,222,14,25]. what is list[-1]??
+a. Erroe
+b. None
+c. 25
+d. 2
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+======
+list1=[2,33,222,15,25]
+list1[-1]      # 25 bcoz INDEXING from the end element to start element like this ......,-3,-2,-1(last element index)  
+25
+# C is correct answer
+
+========================================================================================================================================
+
+Question 10
+You are required a scrap data from IMDb top 250 movies page.
+IT should only have fields movie name,year, and rating.[If not code, write the flow of it and modules used]
+
+
+========================================================================================================================================
+
+Question 11
+What is the diffrence between .py and .pyc files??
+
+
+========================================================================================================================================
+
+Question 12
+list down all the data types presents in python
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+======
+Text Type     : str
+Numeric Types : int, float, complex
+Sequence Types: list, tuple, range
+Mapping Type  : dict
+Set Types     : set, frozenset
+Boolean Type  : bool
+Binary Types  : bytes, bytearray, memoryview
  
+ 
+========================================================================================================================================
 
+Question 13
+str="call me on 9972498208". Using regular expressions print only the integers from the String
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+=======
 
+import re
+str="call 112 me on 9972498208"
+no=re.findall('\d+',str)      # "\d" using for findout digit character in string "\d+" use for concate all the no
+for j in no:
+    print(j,end=" ")
+  
+OUTPUT:
+========
+112 9972498208 
 
+========================================================================================================================================
 
+Question 14
+What the does the split() function do in python. Explain with example.
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+=====
+1. split() method returns a list of strings after breaking the given string by the specified separator.
+example : str.split(",",2) there string seprated by comma "," and 2 means string split 2 times by
+                           comma other remaining part of string as a single part
 
+EXAMPLE:
+str="my name is anil"
+print(str.split(" ",2))               # where we got space we split string but only 2 time as output show "is anil" as a single part
+OUTPUT: ['my','name','is anil']
+
+2. when we want to take a multiple input in one line from user then we use split() method
+
+Example 1:
+x,y=input("enter the no").split()    # bydefault seprator is white space
+u given 5 6 its store in x=5, y=6
+
+EXAMPLE 2
+x=input("enter").split()
+for i in x:
+print(i,end=",")
+
+OUTPUT:
+enter 4 5 6 7 8
+      4,5,6,7,8
+ 
+ 
+========================================================================================================================================
+
+Question 15
+str="abcdefghj". Write a program to extract "def" from the given string
+---------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+========
+
+str="abcdefghj"
+for i in range(len(str)):
+    if(str[i]=="d"):
+            print(str[i:i+3])
+
+OUTPUT:
+def
 
 
 
