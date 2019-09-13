@@ -40,7 +40,7 @@ min letter  :  Z
  =====================================================================================================================
  
 Question 1
-what is the difrence between List and Tuple??
+what is the difrence between List and Tuple?
 ---------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 =======
@@ -57,7 +57,7 @@ ANSWER
  ======================================================================================================================
   
 Question 2
-What is doctionary in python?? write an example.
+What is doctionary in python? write an example.
 ----------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 ======
@@ -73,7 +73,7 @@ d={"a":[1,2,3],40:"hello,jay","h":(4,5,6)}
 =================================================================================================================
 
 Question 3
-How can you randomize the items of a list in place in python??
+How can you randomize the items of a list in place in python?
 ----------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 ======
@@ -158,7 +158,7 @@ A6 :  [[0, 0], [1, 1], [2, 4], [3, 9], [4, 16], [5, 25], [6, 36], [7, 49], [8, 6
 ========================================================================================================================================
 
 Question 6
-Which of the following stmnts create a dictionary?? (multiple ans correct possible)
+Which of the following stmnts create a dictionary? (multiple ans correct possible)
 a. d={}
 b. d={"john":40,"peter":45}
 c. d={40:"john",45:"peter"}
@@ -173,7 +173,7 @@ d=dict{} denotes a empty dictionary
 ========================================================================================================================================
 
 Question 7
-which one of these is floor division?? explain with example
+which one of these is floor division? explain with example
 a. /
 b. //
 c. %
@@ -206,7 +206,7 @@ ANSWER
 ========================================================================================================================================
 
 Question 9
-Suppose list1=[2,33,222,14,25]. what is list[-1]??
+Suppose list1=[2,33,222,14,25]. what is list[-1] ?
 a. Erroe
 b. None
 c. 25
@@ -229,7 +229,7 @@ IT should only have fields movie name,year, and rating.[If not code, write the f
 ========================================================================================================================================
 
 Question 11
-What is the diffrence between .py and .pyc files??
+What is the diffrence between .py and .pyc files?
 
 
 ========================================================================================================================================
