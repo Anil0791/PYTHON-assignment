@@ -15,7 +15,7 @@ print("\n")
 print("count of 'p': ",l.count("p"))     # it will show the occurance of letter
 print("max letter  : ",max(l))           # it will show the maximum ascii value letter
 print("min letter  : ",min(l))           # it will show the maximum ascii value letter
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 OUTPUT:
  index of 'r' :  3
 index of 'p' :  0
@@ -41,7 +41,7 @@ min letter  :  Z
  
 Question 1
 what is the difrence between List and Tuple??
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 =======
 1. List is mutable(changeable)
@@ -58,7 +58,7 @@ ANSWER
   
 Question 2
 What is doctionary in python?? write an example.
-----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 ======
 dict is a set or collection of elements / item which are in the form of KEY and VALUE
@@ -74,11 +74,11 @@ d={"a":[1,2,3],40:"hello,jay","h":(4,5,6)}
 
 Question 3
 How can you randomize the items of a list in place in python??
---------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 ANSWER
 ======
 1st solution with random module
-------------------------
+--------------------------------
 # We can use Random module to shuffle the list data
 # we take an order list n do randommize it
 
@@ -98,7 +98,7 @@ After 2nd shuffle : [40, 30, 15, 10, 20, 45, 5, 25, 35, 50]
 
 -------------------------------------
 2nd solution with Sorted() Function
-----------------------------
+-------------------------------------
 l=[8,6,11,55,2,41,9,57,11]
 print("original list      :",l)
 print("sorted list        :",sorted(l))            # print in sort form data
@@ -110,10 +110,87 @@ original list      : [8, 6, 11, 55, 2, 41, 9, 57, 11]
 sorted list        : [2, 6, 8, 9, 11, 11, 41, 55, 57]
 reverse sorted list: [57, 55, 41, 11, 11, 9, 8, 6, 2]
 
+======================================================================================================================================
 
+Question 4
+Write a sorting algorithm for a numerical dataset in python. give an example
+----------------------------------------------------------------------------------------------------------------------------------------
+ANSWER:
+=========
 
+l=[44,5,67,2,50,111,24,60,55,78]
+print("original list: ",l)
+n=len(l)
+for i in range(n):
+    for j in range(1,n-i):
+        if(l[j-1]>l[j]):
+            (l[j-1],l[j])=([l[j],l[j-1]])
+print("sorted   list: ",l)
 
+OUTPUT:
+=======
+original list:  [44, 5, 67, 2, 50, 111, 24, 60, 55, 78]
+sorted   list:  [2, 5, 24, 44, 50, 55, 60, 67, 78, 111]
 
+=====================================================================================================================================
+
+Question 5
+write down the final value of A0, A1, A2, A3, A4, A5, A6
+----------------------------------------------------------------------------------------------------------------------------------------
+A0=dict(zip(('a','b','c','d','e'),(1,2,3,4,5)))
+A1=range(10);A2=sorted([i for i in A1 if i in A0])
+A3=sorted([A0[s] for s in A0])
+A4=[i for i in A1 if i in A3]
+A5={i:i*i for i in A1}
+A6=[[i,i*i] for i in A1]
+print("A0 : ",A0,"\nA1 : ",A1,"\nA2 : ",A2,"\nA3 : ",A3,"\nA4 : ",A4,"\nA5 : ",A5,"\nA6 : ",A6)
+
+OUTPUT:
+=============
+A0 :  {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5} 
+A1 :  range(0, 10) 
+A2 :  [] 
+A3 :  [1, 2, 3, 4, 5] 
+A4 :  [1, 2, 3, 4, 5] 
+A5 :  {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81} 
+A6 :  [[0, 0], [1, 1], [2, 4], [3, 9], [4, 16], [5, 25], [6, 36], [7, 49], [8, 64], [9, 81]]
+
+========================================================================================================================================
+
+Question 6
+Which of the following stmnts create a dictionary?? (multiple ans correct possible)
+a. d={}
+b. d={"john":40,"peter":45}
+c. d={40:"john",45:"peter"}
+d. d={40:"john",45:"50"}
+----------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+========
+B,C,D are the right answer
+bcoz d={} denotes a " EMPTY SET" not a empty dictionary
+d=dict{} denotes a empty dictionary
+
+========================================================================================================================================
+
+Question 7
+which one of these is floor division?? explain with example
+a. /
+b. //
+c. %
+d. none of the mentioned
+----------------------------------------------------------------------------------------------------------------------------------------
+ANSWER
+=======
+ "//" is floor divison
+ Floor division returns the quotient 
+ in which the digits after the decimal point are removed.
+ EXAMPLE :
+ 9//5   => u got "1.8" by using division but floor divison remove decimal point
+ ANS = 1    after remove deciaml point
+
+ =======================================================================================================================================
+
+ 
 
 
 
