@@ -99,7 +99,78 @@ limit=int(input("enter the limit"))
 sum(limit)
 
 
+=======================================================================================================================================
 
+Question 6.
+Write a function called show_stars(rows). If rows is 5, it should print the following:
+'*'
+'**'
+'***'
+'**'
+'*'
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER:
+=======
+def show_stars(rows):
+    a="*"
+    for i in range(1,rows+1):
+        if i<(rows/2+1):
+            print(a*i)
+        else:
+            print(a*(rows-i+1))
+    
+rows=int(input("enter the row no"))
+show_stars(rows)
+
+=======================================================================================================================================
+
+Question 7.
+Write a function that prints all the prime numbers between 0 and limit where limit is a parameter.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER:
+=======
+def prime(limit):
+    print("1")
+    for i in range(1,limit):
+        if(i>1):
+            for j in range(2,i):
+                if(i%j==0):
+                    break
+            else:
+                print(i)
+
+limit=int(input("input a limit no"))                    
+prime(limit)
+
+=======================================================================================================================================
+
+Question 8.
+Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included). The numbers obtained should be printed in a comma-separated sequence on a single line.
+Hints:
+Consider use range(begin, end) method.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER:
+=======
+************* with function************
+def show(x,y):
+      for i in range(x,y+1):
+            if i%7==0 and i%5!=0:
+                print(i,end=",")
+                
+# also take input from user           
+# x,y=map(int,input("enter the limit").split(","))
+x=2000;y=3000
+show(x,y)
+
+#************** without function ************************
+l1=[]
+for i in range(2000,3001):
+      if i%7==0 and i%5!=0:
+            l1.append(i)
+print(l1)
 
 
 
