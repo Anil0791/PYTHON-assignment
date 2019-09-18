@@ -11,6 +11,7 @@
 
 =======================================================================================================import math
 ***************** using MATH module **************
+
 import math
 d=input("enter the nos").split(",")
 p=1
@@ -24,9 +25,10 @@ for j in d:
 #    l.append(str(r))
 # print(",".join(l))
 print(",".join(map(str,l)))                 # convert list integer into string to join
+-------------------------------------------------------------------------------------
 
 *****************  SImple Method *************
-# *************** Using Simple Method ************
+
 d=map(int,input("enter the nos: ").split(","))
 c=50;h=30
 l=[]
