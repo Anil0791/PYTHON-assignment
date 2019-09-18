@@ -10,15 +10,30 @@
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 
 =======================================================================================================import math
+***************** using MATH module **************
+import math
 d=input("enter the nos").split(",")
-n=len(d)                            # use for output format
 p=1
+l=[]
 c=50;h=30
 for j in d:
     k=int(j)
     q=int(2*c*k/h)
-    r=int(math.sqrt(q))
-    print(r,end="")
-    if(p<n):               # this is used for ouput format look like 18,22,24
-        print(end=",")
-        p+=1
+    r=int(math.sqrt(q))                     # simple JOIN will work strings iterator
+    l.append(r)                             # for integer u have to convert into string
+#    l.append(str(r))
+# print(",".join(l))
+print(",".join(map(str,l)))                 # convert list integer into string to join
+
+*****************  SImple Method *************
+# *************** Using Simple Method ************
+d=map(int,input("enter the nos: ").split(","))
+c=50;h=30
+l=[]
+for i in d:
+    q=int(2*c*i/h)
+    q=int(q**(1/2))
+    #l.append(q)                    
+    l.append(str(q))                # convert integer into string at adding tym for join 
+print(",".join(l)
+#print(",".join(map(str,l)))
