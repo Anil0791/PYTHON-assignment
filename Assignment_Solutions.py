@@ -292,6 +292,17 @@ it should be assumed to be a console input
 ANSWER:
 =======
 
+******************Using MATH Module*******************
+
+import math
+d=map(int,input("enter the nos: ").split(","))
+c=50;h=30
+l=[]
+for i in d:
+    q=int(2*c*i/h)
+    q=int(math.sqrt(q))
+    l.append(q)
+print(",".join(map(str,l)))
 
 
 
