@@ -404,7 +404,28 @@ p=sorted(l)                                 # sorting the list
 print(" ".join(p))
 
 
+=======================================================================================================================================
 
+Question 18.
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and 
+then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Example:
+0100,0011,1010,1001 Then the output should be: 1010 Notes: Assume the data is input by console.
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER:
+======
+
+x= input("enter the no").split(",")
+l=[]
+for i in x:
+    j=int(i,2)
+    if not j%5:                             # if not work on when in ur condition u got ZERO (for integer) , EMPTY or False (for string)
+#   if j%5==0:                               # both r same
+        l.append(i)
+print(" , ".join(l))
 
 
 
