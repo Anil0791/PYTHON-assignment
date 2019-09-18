@@ -252,6 +252,7 @@ Hints:
 In case of input data being supplied to the question, 
 it should be assumed to be a console input. tuple() method can convert list to tuple
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 ANSWER:
 =======
 
@@ -268,6 +269,7 @@ in upper case. Also please include simple test function to test the class method
 Hints:
 Use init method to construct some parameters
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 ANSWER:
 =======
 
@@ -289,6 +291,7 @@ If the output received is in decimal form, it should be rounded off to its neare
 (for example, if the output received is 26.0, it should be printed as 26) In case of input data being supplied to the question,
 it should be assumed to be a console input
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 ANSWER:
 =======
 
@@ -328,6 +331,7 @@ the output of the program should be: [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4
 Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 ANSWER:
 =======
 
@@ -343,6 +347,7 @@ the output should be: bag,hello,without,world
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 ANSWER:
 ======
 
@@ -351,67 +356,52 @@ s.sort()                                      # SORT method prefer CAPITAL lette
 print(",".join(s))                            # a,b,A,B,Z,z  its sort output is [A,B,Z,a,b,z] look like this
 
 
+
 =======================================================================================================================================
 
 Question 16.
+Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+Suppose the following input is supplied to the program: Hello world Practice makes perfect
+Then, the output should be: HELLO WORLD PRACTICE MAKES PERFECT
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ANSWER:
+======
+
+s=input("enter string: ")
+print(s.upper())                                # convert all small letter into capital letter
+# print(s.lower())                              # convert all Capital letter into small letter
 
 
+=======================================================================================================================================
 
+Question 17.
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words
+and sorting them alphanumerically. 
+Suppose the following input is supplied to the program: hello world and practice makes perfect and hello world again 
+Then, the output should be: again and hello makes perfect practice world
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input. We use set container 
+to remove duplicated data automatically and then use sorted() to sort the data.
+---------------------------------------------------------------------------------------------------------------------------------------
 
+ANSWER:
+======
 
+s=input("enter string : ").split(" ")
+l=[]
+for i in s:
+    if i in l:
+        continue                            # if match duplicate contunue loop
+    else:
+        l.append(i)                         # not match then add into list
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+p=sorted(l)                                 # sorting the list
+# l.sort()
+# print(" ".join(l))
+print(" ".join(p))
 
 
 
