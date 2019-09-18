@@ -156,21 +156,23 @@ ANSWER:
 =======
 ************* with function************
 def show(x,y):
+      L=[]
       for i in range(x,y+1):
             if i%7==0 and i%5!=0:
-                print(i,end=",")
+                  L.append(i)
+      print(",".join(map(str,L)))
                 
 # also take input from user           
 # x,y=map(int,input("enter the limit").split(","))
 x=2000;y=3000
 show(x,y)
 
-#************** without function ************************
+************** without function ************************
 l1=[]
 for i in range(2000,3001):
       if i%7==0 and i%5!=0:
             l1.append(i)
-print(l1)
+print(",".join(map(str,l1)))
 
 
 
