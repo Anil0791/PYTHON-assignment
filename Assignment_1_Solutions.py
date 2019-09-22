@@ -66,17 +66,24 @@ veh(speed)
 Question 4.
 Write a function called showNumbers that takes a parameter called limit. It should print all the numbers between 0 and limit with a 
 label to identify the even and odd numbers. For example, if the limit is 3, it should print:
-1.EVEN
-2.ODD
-3.EVEN
-4.ODD
+1.ODD
+2.EVEN
+3.ODD
+4.EVEN
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 ANSWER:
 =======
 
+def showNumbers(n):
+    for i in range(n+1):
+        if not i%2:
+            print(i,"EVEN")
+        else:
+            print(i,"ODD")
 
-
+n=int(input("enter the limit"))
+showNumbers(n)
 
 
 =======================================================================================================================================
@@ -179,6 +186,7 @@ for i in range(2000,3001):
             l1.append(i)
 print(",".join(map(str,l1)))
 
+
 =======================================================================================================================================
 
 Question 9.
@@ -191,7 +199,6 @@ In case of input data being supplied to the question, it should be assumed to be
 
 ANSWER:
 =======
-
 ******* simple method  ***************
 =============================================
 
@@ -259,6 +266,8 @@ ANSWER:
 n=input("enter the nos").split(",")
 p=list(n)
 q=tuple(n)
+# q=list(p)
+# p=list(q)
 print(p,q)
 
 =======================================================================================================================================
@@ -273,9 +282,16 @@ Use init method to construct some parameters
 ANSWER:
 =======
 
-
-
-
+class st:
+    def getstring(self):
+        s=input("input a string")
+        self.s=s
+    def printstring(self):
+        print(self.s.upper())
+        
+obj=st()
+obj.getstring()
+obj.printstring()
 
 
 =======================================================================================================================================
@@ -423,7 +439,7 @@ l=[]
 for i in x:
     j=int(i,2)
     if not j%5:                             # if not work on when in ur condition u got ZERO (for integer) , EMPTY or False (for string)
-#   if j%5==0:                               # both r same
+#   if j%5==0:  and if not j%5:             # both r same
         l.append(i)
 print(" , ".join(l))
 
@@ -440,7 +456,16 @@ In case of input data being supplied to the question, it should be assumed to be
 ANSWER:
 ======
 
-
+l=[]
+for i in range(1000,3001):
+        a=int(i)%2
+        b=int(i/10)%2
+        c=int(i/100)%2
+        d=int(i/1000)%2
+        if (a==0) and (b==0) and (c==0) and (d==0):        
+                l.append(i)
+   
+print(",".join(map(str,l)))
 
 
 =======================================================================================================================================
@@ -455,6 +480,22 @@ In case of input data being supplied to the question, it should be assumed to be
 ANSWER:
 ======
 
+#s=input("enter a string")
+s="hello world! 123"
+l=[]
+letters=digits=0
+for i in range(len(s)):
+    if s[i]!=" ":
+        if(64<ord(s[i])<123):
+                letters+=1
+                l.append(s[i])
+        elif (s[i].isdigit()):
+                digits+=1
+                l.append(s[i])
+            
+#print(l)
+print("LETTERS: ",letters, " DIGITS :",digits)
+
 
 =======================================================================================================================================
 
@@ -467,6 +508,24 @@ In case of input data being supplied to the question, it should be assumed to be
 
 ANSWER:
 ======
+
+#s=input("enter a string")
+s="Hello world!"
+l=[]
+lower=upper=0
+for i in range(len(s)):
+    if s[i]!=" ":
+        if(s[i].islower()):
+                lower+=1
+                l.append(s[i])
+        elif (s[i].isupper()):
+                upper+=1
+                l.append(s[i])
+            
+#print(l)
+print("UPPER CASE : ",upper, " LOWER CASE :",lower)
+
+
 =======================================================================================================================================
 
 Question 22.
@@ -490,6 +549,17 @@ In case of input data being supplied to the question, it should be assumed to be
 
 ANSWER:
 ======
+
+n=input("enter no").split(",")
+l=[]
+for i in n:
+    l.append(int(i))
+p=list(filter(lambda i:(i%2!=0),l))
+q=list(map(lambda x:x**2,p))
+print(",".join(map(str,p)))
+print(",".join(map(str,q)))
+
+
 =======================================================================================================================================
 
 Question 24.
@@ -595,6 +665,16 @@ Using the ** operator
 ANSWER:
 ======
 
+class a:
+    def sqr(self,n):
+        self.n=n
+        return n**2
+n=int(input("enter a no"))  
+obj=a()
+p=obj.sqr(n)
+print(p)
+                              
+                             
 =======================================================================================================================================
 
 Question 31.
@@ -628,7 +708,17 @@ Define a function with two numbers as arguments. You can compute the sum in the 
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+
+def sum(a,b):
+    c=a+b
+    return c
+
+a,b=map(int,input("enter the no").split(","))
+d=sum(a,b)
+print(d)                             
+                              
+                             =======================================================================================================================================
 
 Question 34.
 Define a function that can convert a integer into a string and print it in console.
@@ -638,7 +728,14 @@ Use str() to convert a number to string.
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+def conint(s):
+    print(int(s,10))
+
+s=input("input a string")
+conint(s)                             
+
+                             =======================================================================================================================================
 
 Question 35.
 Define a function that can receive two integral numbers in string form and compute their sum and then print it in console.
@@ -648,7 +745,17 @@ Use int() to convert a string to integer.
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+def sum(a,b):
+    return a+b
+
+#a,b=input("enter two no").split(",")
+a,b=map(int,input("enter 2 no : ").split(","))
+#a=int(a)
+#b=int(b)
+sum(a,b)                             
+                              
+                             =======================================================================================================================================
 
 Question 36.
 Define a function that can accept two strings as input and concatenate them and then print it in console.
@@ -658,7 +765,13 @@ Use + to concatenate the strings
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+def sums(a,b):
+    print(a+b)
+a,b=input("input two string : ").split(",")
+sums(a,b)                             
+                              
+                             =======================================================================================================================================
 
 Question 37.
 Define a function that can accept two strings as input and print the string with maximum length in console.
@@ -669,7 +782,20 @@ Use len() function to get the length of a string
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+def st(s,t):
+    m=len(s)
+    n=len(t)
+    if m>n:
+        print("Max length of string",m)
+    elif n>m:
+        print("Max length of string",n)
+    else:
+        print("both have same length \n",s,"\n",t)
+s,t=input("input two strings : ").split(",")
+st(s,t)                              
+                              
+                             =======================================================================================================================================
 
 Question 38.
 Define a function that can accept an integer number as input and print the "It is an even number" 
@@ -680,7 +806,17 @@ Use % operator to check if a number is even or odd.
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+def ero(n):
+    if not n%2:
+        print("it is an even number")
+    else:
+        print("is is an odd number")
+
+n=int(input("input a number"))
+ero(n)                                     
+                              
+                             =======================================================================================================================================
 
 Question 39.
 Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) 
@@ -691,7 +827,12 @@ Use dict[key]=value pattern to put entry into a dictionary. Use ** operator to g
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+d=dict()
+for i in range(1,4):
+    d[i]=i**2
+print(d)                              
+                             =======================================================================================================================================
 
 Question 40.
 Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) 
@@ -702,7 +843,13 @@ Use dict[key]=value pattern to put entry into a dictionary. Use ** operator to g
 
 ANSWER:
 ======
-=======================================================================================================================================
+
+d=dict()
+for i in range(1,21):
+    d[i]=i**2
+print(d)                             
+                             
+                             =======================================================================================================================================
 
 Question 41.
 Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included)
@@ -715,5 +862,8 @@ Use range() for loops. Use keys() to iterate keys in the dictionary. Also we can
 ANSWER:
 ======
 
-
+d=dict()
+for i in range(1,21):
+    d[i]=i**2
+print(d.values())
 
