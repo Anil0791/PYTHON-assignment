@@ -78,9 +78,9 @@ ANSWER:
 def showNumbers(n):
     for i in range(n+1):
         if not i%2:
-            print(i,"EVEN")
+            print(i+1,"EVEN")
         else:
-            print(i,"ODD")
+            print(i+1,"ODD")
 
 n=int(input("enter the limit"))
 showNumbers(n)
