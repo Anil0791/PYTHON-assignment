@@ -307,8 +307,9 @@ ANSWER
 ========
 
 str="abcdefghj"
+str1='def'
 for i in range(len(str)):
-    if(str[i]=="d"):
+    if(str[i]==str1[0):
             print(str[i:i+3])
 
 OUTPUT:
